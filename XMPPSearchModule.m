@@ -20,7 +20,7 @@ static const id kSearchFieldNull    = @"searchNull";
 
 @implementation XMPPSearchModule
 
-@synthesize searchHost = _searchHost, resault = _resault;
+@synthesize searchHost = _searchHost, result = _result;
 
 #pragma mark - init
 
@@ -40,7 +40,7 @@ static const id kSearchFieldNull    = @"searchNull";
 {
     if (![searchHost isEqualToString:_searchHost]) {
         _searchHost = searchHost;
-        _resault = nil;
+        _result = nil;
     }
 }
 
@@ -152,7 +152,7 @@ static const id kSearchFieldNull    = @"searchNull";
             return NO;
         }
         if (obj == kSearchFieldResault) {
-            _resault = [XMPPSearchResault resaultWithElement:iq];
+            _result = [XMPPSearchResult resaultWithElement:iq];
             [self->multicastDelegate searchModelGetFields:self];
         }else if (obj != kSearchFieldNull) {
             [self->multicastDelegate searchModel:self

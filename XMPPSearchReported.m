@@ -48,7 +48,7 @@
 
 - (NSXMLElement *)xmlElement
 {
-    // not finished
+    // not finished, this method will be used in the server part.
     return nil;
 }
 

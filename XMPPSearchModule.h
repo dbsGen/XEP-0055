@@ -8,7 +8,7 @@
 
 #import "XMPPModule.h"
 #import "XMPPSearchReported.h"
-#import "XMPPSearchResault.h"
+#import "XMPPSearchResult.h"
 
 @class XMPPIQ;
 
@@ -17,8 +17,9 @@
 }
 
 @property (nonatomic, strong)   NSString    *searchHost;
-// Get the template, using it after invoke -askForFields and -searchModelGetFields be invoked.
-@property (nonatomic, readonly) XMPPSearchResault   *resault;
+// Get the template, using it after invoke -askForFields and
+// -searchModelGetFields be invoked.
+@property (nonatomic, readonly) XMPPSearchResult   *result;
 
 /*
     Request for searching.
