@@ -16,7 +16,7 @@ And put XEP-0055 in XMPPFramework/Extensions ,just like:
 
 ![screenshots](http://zhaorenzhi.cn/wp-content/uploads/2012/09/ss_xep-0055.png)
 
-How to code
+Code
 =====================================
 
 <b>1,Init:</b> 
