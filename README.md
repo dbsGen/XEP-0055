@@ -19,12 +19,12 @@ And put XEP-0055 in XMPPFramework/Extensions ,just like:
 How to code
 =====================================
 
-* 1,Init: 
+<b>1,Init:</b> 
 
 	_xmppSearchModule = [[XMPPSearchModule alloc] initWithDispatchQueue:_queue];
-        [_xmppSearchModule activate:_xmppStream];
+	[_xmppSearchModule activate:_xmppStream];
 
-* 2,Get the Search Fields:
+<b>2,Get the Search Fields:</b>
 
 Using ```-askForFields``` to get the fields.
 
@@ -32,22 +32,21 @@ If use this method you will implement ```-searchModelGetFields:``` in the delega
 
 While ```-searchModelGetFields:``` be invoked, ```result``` will be Non-empty.
 
-Then, ```[result copyForSingleFields]``` to get the single fields, the return is a array of XMPPSearchNode.
+Then, ```[result copyForSingleFields]``` to get the single fields, the return 
+is a array of XMPPSearchNode. And ```[result copyForTableFields]``` to get the 
+data forms fields, the return is a array of XMPPSearchNode.
 
-And ```[result copyForTableFields]``` to get the data forms fields, the return is a array of XMPPSearchNode.
 
-
-* 3,Fill the fields.
+<b>3,Fill the fields</b>
 
 If you know your XMPP server you can skip the step 2, and make your fields.
 
 Make your fields or copy from ```XMPPSearchResult``` to the get the fields.
-
 The fields will be instances of ```XMPPSearchNode```'s subclasses.  
 
-They are define in ```XMPPSearchNode.h```.
+They are defined in ```XMPPSearchNode.h```.
 
-* 4,Send the search fields to server and get the result.
+<b>4,Send the search fields to server and get the result</b>
 
 	- (void)searchWithFields:(NSArray*)fields userData:(id)userData;
 
