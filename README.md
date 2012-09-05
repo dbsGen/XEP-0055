@@ -32,9 +32,9 @@ If use this method you will implement ```-searchModelGetFields:``` in the delega
 
 While ```-searchModelGetFields:``` be invoked, ```result``` will be Non-empty.
 
-Then, ```[result copyForSingleFields]``` to get the single fields, return a array of XMPPSearchNode.
+Then, ```[result copyForSingleFields]``` to get the single fields, the return is a array of XMPPSearchNode.
 
-And ```[result copyForTableFields]``` to get the data forms fields, return a array of XMPPSearchNode.
+And ```[result copyForTableFields]``` to get the data forms fields, the return is a array of XMPPSearchNode.
 
 
 * 3,Fill the fields.
