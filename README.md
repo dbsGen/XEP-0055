@@ -54,8 +54,9 @@ They are defined in ```XMPPSearchNode.h```.
 ```fields``` is the fields just said in step 3. And the method support you 
 
 to transfer a ```userData``` , the ```userData``` will be get in the delegate 
+of ```-searchModel:result:userData:``` . 
 
-of ```-searchModel:result:userData:``` . the result is a instance of XMPPSearchReported.
+The result is a instance of XMPPSearchReported.
 
 
 ##Others
