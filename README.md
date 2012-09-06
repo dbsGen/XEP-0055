@@ -22,6 +22,7 @@ Code
 <b>1,Init:</b> 
 
 	_xmppSearchModule = [[XMPPSearchModule alloc] initWithDispatchQueue:_queue];
+	_xmppSearchModule.searchHost = @"YOUR_SEARCH_HOST_HERE";
 	[_xmppSearchModule activate:_xmppStream];
 
 <b>2,Get the Search Fields:</b>
