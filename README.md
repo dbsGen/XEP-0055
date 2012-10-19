@@ -62,4 +62,4 @@ The result is a instance of XMPPSearchReported.
 ##Others
 
 Maybe, you can find this some thing in XEP-0055 I had not implemented in this project,
-you can fork this project and add they.
+you can fork this project and add them.
