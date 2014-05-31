@@ -6,6 +6,7 @@
 //  Copyright (c) 2012年 Sctab. All rights reserved.
 //
 
+#import "XMPP.h"
 #import "XMPPSearchModule.h"
 #import "XMPPIQ.h"
 #import "XMPPStream.h"
@@ -134,17 +135,9 @@ static const id kSearchFieldNull    = @"searchNull";
 - (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq
 {
     
-    NSXMLElement *query = [[iq elementsForName:@"query"] lastObject];
-    NSArray *namespaces = [query namespaces];
-    __block BOOL exist = NO;
-    NSString *ns = @"jabber:iq:search";
-    [namespaces enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([ns isEqualToString:[obj stringValue]]) {
-            exist = YES;
-            *stop = YES;
-        }
-    }];
-    if (exist) {
+    NSXMLElement *query = [iq elementForName:@"query"
+                                       xmlns:@"jabber:iq:search"];
+    if (query) {
         // call back
         id eid = iq.elementID;
         id obj = [_searchUserDatas objectForKey:eid];

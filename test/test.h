@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XMPPFramework.h"
+#import "XMPP.h"
+#import "XMPPSearchModule.h"
 
 @interface test : NSObject {
     XMPPStream  *_stream;

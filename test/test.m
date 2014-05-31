@@ -46,7 +46,12 @@
 
 - (void)connect
 {
-    [_stream connect:nil];
+    NSError *err = nil;
+    [_stream connectWithTimeout:10
+                          error:&err];
+    if (err) {
+        NSLog(@"Got a error when connect to the server . %@", err);
+    }
 }
 
 - (void)searchModel:(XMPPSearchModule*)searchModul result:(XMPPSearchReported*)result userData:(id)userData
